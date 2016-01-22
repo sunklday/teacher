@@ -33,6 +33,10 @@ public class HelloController {
 		model.addAttribute("message", text);
 		return "hello";
 	}
+	public String login(){
+		return  null;
+	}
+
 	private String exception(String exceptionStr){
 		return "exception";
 	}
