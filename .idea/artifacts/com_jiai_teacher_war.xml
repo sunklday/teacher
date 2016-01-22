@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="com.jiai.teacher:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.jiai.teacher.war">
+      <element id="artifact" artifact-name="com.jiai.teacher:war exploded" />
+    </root>
+  </artifact>
+</component>
