@@ -15,13 +15,13 @@ public class SerarchManager {
     @Autowired
     public TeacherMapper teacherMapper;
 
-    public String teacherHandle(String name) {
+    public Teacher teacherHandle(String name) {
 
         Teacher teacher=teacherMapper.getTeacher(name);
 
         if (teacher==null)
             return null;
 
-        return teacher.getName();
+        return teacher;
     }
 }

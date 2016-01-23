@@ -7,7 +7,17 @@ public class Teacher {
    /* CommonAnnotationBeanPostProcessor发现注解的名字*/
 
     private String name;
-    private String age;
+    private Integer age;
+    private String school;
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
     public String getName() {
         return name;
     }
@@ -16,11 +26,11 @@ public class Teacher {
         this.name = name;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 }

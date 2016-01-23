@@ -1,6 +1,19 @@
 <html>
 <body>
 	<h1>${message}</h1>
-
+	<table >
+		<tr>
+			<th>name</th>
+			<td>${tercher.name}</td>
+		</tr>
+		<tr>
+			<th>age</th>
+			<td>${tercher.age}</td>
+		</tr>
+		<tr>
+			<th>school</th>
+			<th>${tercher.school}</th>
+		</tr>
+	</table>
 </body>
 </html>

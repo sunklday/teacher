@@ -27,10 +27,11 @@ public class HelloController {
 	public String printName(HttpServletRequest httpServletRequest, HttpServletResponse response,ModelMap model){
 		String name =httpServletRequest.getParameter("name");
 
-		String text=serarchManager.teacherHandle(name);
-		if (text==null)
+		Teacher teacher=serarchManager.teacherHandle(name);
+		if (teacher==null)
 			return exception("null");
-		model.addAttribute("message", text);
+		model.addAttribute("tercher", teacher);
+		model.addAttribute("message", "teacher");
 		return "hello";
 	}
 	public String login(){
