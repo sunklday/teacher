@@ -1,6 +1,8 @@
 package com.springapp.mvc.biz;
 
 import com.springapp.mvc.domain.Teacher;
+import com.springapp.mvc.domain.TeacherInfo;
+import com.springapp.mvc.persistence.TeacherInfoMapper;
 import com.springapp.mvc.persistence.TeacherMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +15,9 @@ import org.springframework.ui.ModelMap;
 @Controller
 public class SerarchManager {
     @Autowired
-    public TeacherMapper teacherMapper;
+    private TeacherMapper teacherMapper;
+    @Autowired
+    private TeacherInfoMapper teacherInfoMapper;
 
     public Teacher teacherHandle(String name) {
 
@@ -23,5 +27,12 @@ public class SerarchManager {
             return null;
 
         return teacher;
+    }
+    public TeacherInfo teacherInfoHandle(String name){
+        TeacherInfo teacherInfo = teacherInfoMapper.getTeacherInfo(name);
+        if(teacherInfo == null)
+            return null;
+
+        return teacherInfo;
     }
 }
