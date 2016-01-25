@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface TeacherMapper {
     Teacher getTeacher(String name);
+
+    void updateTeacher(Teacher teacher);
 }

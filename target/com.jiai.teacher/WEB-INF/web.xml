@@ -15,20 +15,19 @@
 	</servlet>
 	<!-- Reads request input using UTF-8 encoding -->
 	<filter>
-		<filter-name>characterEncodingFilter</filter-name>
+		<filter-name>encoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<init-param>
-			<param-name>encoding</param-name>
+			<param-name>encoding</param-name><!--用来指定一个具体的字符集-->
 			<param-value>UTF-8</param-value>
 		</init-param>
 		<init-param>
-			<param-name>forceEncoding</param-name>
-			<param-value>true</param-value>
+			<param-name>forceEncoding</param-name><!--true：无论request是否指定了字符集，都是用encoding；false：如果request已指定一个字符集，则不使用encoding-->
+			<param-value>false</param-value>
 		</init-param>
 	</filter>
-
 	<filter-mapping>
-		<filter-name>characterEncodingFilter</filter-name>
+		<filter-name>encoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	<servlet-mapping>

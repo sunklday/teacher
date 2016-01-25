@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>教师</title>
 </head>
 <body>
       <h2>${teacherInfo.name}</h2>
@@ -19,7 +19,7 @@
             <td>${teacherInfo.name}</td>
           </tr>
           <tr>
-            <th>classid</th>
+            <th>age</th>
             <td>${teacherInfo.classid}</td>
           </tr>
           <tr>
