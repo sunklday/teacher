@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,10 +18,11 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
+@ContextConfiguration("file:src/main/webapp/WEB-INF/web.xml")
+
 public class AppTests {
     private MockMvc mockMvc;
-
+    private static Logger logger = Logger.getLogger(AppTests.class);
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
     protected WebApplicationContext wac;
@@ -36,4 +38,9 @@ public class AppTests {
                 .andExpect(status().isOk())
                 .andExpect(view().name("hello"));
     }
+    @Test
+    public void logger() throws Exception {
+        logger.debug("This is debug message.");
+    }
+
 }

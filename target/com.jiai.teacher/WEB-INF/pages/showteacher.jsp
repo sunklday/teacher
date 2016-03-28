@@ -13,7 +13,6 @@
 <body>
       <h2>${teacherInfo.name}</h2>
       <table >
-        <c: var="teacherInfo">
           <tr>
             <th>name</th>
             <td>${teacherInfo.name}</td>
@@ -26,7 +25,6 @@
             <th>subject</th>
             <th>${teacherInfo.subject}</th>
           </tr>
-        </c:>
       </table>
 </body>
 </html>

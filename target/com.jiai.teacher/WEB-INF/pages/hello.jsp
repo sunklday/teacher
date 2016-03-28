@@ -14,7 +14,7 @@
 <body>
 	<h1>${message}</h1>
 	<table >
-		<c: var="teacher">
+
 			<tr>
 				<th>name</th>
 				<td><a href="/showteacher/${teacher.name}">${teacher.name}</a></td>
@@ -30,8 +30,7 @@
 			<tr>
 				<th><a href="/modify/${teacher.name}">修改</a></th>
 			</tr>
-
-		</c:>
 	</table>
+<c:out value="${teacher.name}"></c:out>
 </body>
 </html>
