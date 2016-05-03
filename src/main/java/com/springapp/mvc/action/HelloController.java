@@ -6,9 +6,15 @@ import com.springapp.mvc.domain.Teacher;
 import com.springapp.mvc.domain.TeacherInfo;
 import com.springapp.mvc.persistence.TeacherInfoMapper;
 import com.springapp.mvc.persistence.TeacherMapper;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 
 @Controller
 @RequestMapping(value = "/")
@@ -67,6 +75,20 @@ public class HelloController {
 		teacherManager.updateTeacher(teacher);
 
 		return "redirect:/hello?name="+teacher.getName();
+	}
+
+	@RequestMapping(value = "/download")
+	public ResponseEntity<byte[]> download() throws IOException {
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+		headers.setContentDispositionFormData("attachment", "dict.txt");
+		return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(new File("E:/apache-tomcat-7.0.67-windows-x64/apache-tomcat-7.0.67/webapps/downloadtxt/213.txt")),
+				headers, HttpStatus.CREATED);
+	}
+
+	@RequestMapping(value = "/	jqgrid", method = RequestMethod.GET)
+	public String jqgrid(HttpServletRequest httpServletRequest, HttpServletResponse response,ModelMap model) {
+		return "jqgrid";
 	}
 	public String login(){
 		return  null;
