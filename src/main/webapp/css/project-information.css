@@ -1,0 +1,94 @@
+@media screen and (max-width: 1367px) {
+    .every-date {
+        height: 700px;
+    }
+
+    .project {
+        width: 30%;
+        height: 470px;
+    }
+
+    .contain-left {
+        height: 550px;
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1368px) {
+    .project {
+        height: 600px;
+        width: 24%;
+    }
+
+    .contain-left {
+        height: 750px;
+        width: 55%;
+    }
+}
+
+.project {
+    background-color: white;
+    padding: 10px 0 0 0;
+    margin: 20px 3%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+    float: left;
+}
+
+.contain-left {
+    float: right;
+    margin: 20px 3%;
+}
+
+.project-same {
+    background-color: white;
+    width: 45%;
+    height: calc(100% - 20px);
+    padding: 10px;
+}
+
+.project-mesage {
+    float: left;
+}
+
+.project-hot {
+    float: right;
+}
+
+.project-top {
+    height: calc(60% - 10px);
+}
+
+.hj-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hj-ul li {
+    padding: 5px;
+    color: #00adb5;
+}
+
+.project-text {
+    position: relative;
+    top: 20px;
+    height: 39%;
+}
+
+.project-text-same {
+    background-color: white;
+    padding: 10px;
+    height: calc(50% - 15px);
+}
+
+.hot-button {
+    cursor: pointer;
+    color: white;
+    background-color: #00adb5;
+    display: inline-block;
+    border-radius: 7px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+

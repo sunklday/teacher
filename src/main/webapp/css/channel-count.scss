@@ -1,0 +1,85 @@
+//屏幕-折线图-适配
+@media screen and (max-width: 1367px) {
+  .every-wrapper{
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1368px) {
+  .every-wrapper{
+    height: 460px;
+  }
+}
+
+//******************更换内容css*************************
+//完整一个小的折线图
+.every-wrapper{
+  width: 44%;
+  background-color: white;
+  float: left;
+  padding: 10px 0 0 0;
+  margin: 20px 3%;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.16);
+}
+//单独折线图的标题栏
+.every-wrapper-time{
+  width: 100%;
+  height: 40px;
+}
+//首页/用户数/活跃度/留存度
+.ev-wr-ti-PV{
+  width: auto;
+  height: 40px;
+  text-align: center;
+  margin-left: 20px;
+  float: left;
+  font-size: 18px;
+  color: #00adb5;
+  line-height: 40px;
+}
+//全部/3天/7天...
+.ev-wr-ti-same{
+  float: right;
+  font-size: 16px;
+  color: #b7b7b7;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+//具体数据
+.date-same{
+  background-color: #888888;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+.pv-date{
+
+}
+
+.every-wrapper .hj-ul{
+  list-style: none;
+}
+.every-wrapper .hj-ul li{
+  color: #00adb5;
+  font-size:20px;
+  padding: 10px;
+
+}
+.content-count{
+  margin-left: 10px;
+}
+
+.input-find span {
+  margin-left: 3%;
+}
+.input-find .hj-button{
+  top: -3px;
+  color: white;
+  background-color: #00adb5;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}

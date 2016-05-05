@@ -1,0 +1,85 @@
+@media screen and (max-width: 1367px) {
+
+    .project-mesage{
+        width: 90%;
+        height: 640px;
+
+    }
+    .hj-ul li {
+        padding: 5px;
+    }
+
+    textarea {
+        font-size: 13px;
+    }
+    .descrip-te{
+        height: 90px;
+    }
+}
+
+@media screen and (min-width: 1368px) {
+    .project-mesage{
+        width: 93%;
+        height: 800px;
+    }
+
+    .hj-ul li {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .descrip-te{
+        height: 150px;
+    }
+    textarea {
+        font-size: 18px;
+    }
+}
+
+.project-mesage {
+    background-color: white;
+    margin: 0 4% 20px 4%;
+}
+
+
+.input-style {
+    width: 20%;
+    height: 20px;
+    border:1px solid #00adb5;
+}
+
+.hj-ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0 3%;
+}
+
+.hj-ul li {
+    color: #00adb5;
+}
+
+.save-button{
+    background-color: #00adb5;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 9px ;
+    margin: 20px 0 0 40%;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+
+.input-box{
+    margin-left: 5%;
+}
+.descrip-te{
+    width: 96%;
+    resize: none;
+    margin-top: 10px;
+    border-color: #00adb5;
+    /*color: #00adb5;*/
+}
+.send-document{
+    width: 70px;
+    font-size: 18px;
+}

@@ -1,0 +1,171 @@
+@media screen and (max-width: 1367px) {
+    .contain-left {
+        height: 650px;
+        width: 28%;
+    }
+
+    .every-project {
+        width: 28%;
+    }
+
+    .project {
+        height: 400px;
+        margin: 20px 0 0 10px;
+    }
+
+    .contain-right {
+        height: 650px;
+    }
+    .sure-input{
+        width: 35%;
+    }
+    .title-up{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1368px) {
+    .contain-left {
+        height: 700px;
+        width: 25%;
+    }
+
+    .every-project {
+        width: 21%;
+    }
+
+    .project {
+        height: 600px;
+        margin: 20px 0 0 20px;
+    }
+
+    .contain-right {
+        height: 900px;
+    }
+    .sure-input{
+        width: 45%;
+    }
+}
+
+.every-wrapper {
+    width: 94%;
+    background-color: white;
+    float: left;
+    padding: 10px 0 0 0;
+    margin: 20px 3%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.every-wrapper .hj-ul {
+    list-style: none;
+}
+
+.every-wrapper .hj-ul li {
+    color: #00adb5;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.content-count {
+    margin-left: 10px;
+}
+
+
+.title-left {
+    float: left;
+}
+
+.title-right {
+    float: right;
+    cursor: pointer;
+    color: #00adb5;
+    font-size: 22px;
+    margin: 30px 4% 0 0;
+}
+
+
+
+.contain-left {
+    float: left;
+}
+
+.contain-right {
+    width: 70%;
+    float: right;
+    overflow-y: scroll;
+}
+
+.project {
+    width: 100%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.contain-left h3 {
+    color: #00adb5;
+    width: 50%;
+    margin: 20px 30%;
+}
+
+.project-img {
+    width: 120px;
+    height: 120px;
+    background-color: #B1BCBD;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.every-project {
+    height: 230px;
+    background-color: #B1BCBD;
+    display: inline-block;
+    margin: 20px 2%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.titleDetail {
+    width: 100%;
+    height: 150px;
+    background-color: red;
+}
+.titleDetail .title-detail{
+    float: right;
+    display: inline-block;
+    background-color: #00adb5;
+    color: white;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 7px;
+}
+.title-up{
+    text-align: center;
+}
+.pr-autho{
+    float: left;
+    margin-left: 5px;
+}
+.pr-id{
+    float: right;
+    margin-right: 5px;
+}
+.controller-sure{
+    margin-top: 30px;
+}
+.sure-input{
+    float: left;
+    margin-left: 10%;
+    height: 25px;
+}
+.sure{
+    float: left;
+    margin-left: 10%;
+    width: 60px;
+    height: 30px;
+    background-color: #00adb5;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 7px;
+}

@@ -1,0 +1,158 @@
+@media screen and (max-width: 1367px) {
+  .contain-left {
+    height: 650px;
+    width: 28%; }
+
+  .every-project {
+    width: 28%; }
+
+  .project {
+    height: 400px;
+    margin: 20px 0 0 10px; }
+
+  .contain-right {
+    height: 650px; }
+
+  .project-img {
+    margin: 10px 35%; } }
+@media screen and (min-width: 1368px) {
+  .contain-left {
+    height: 700px;
+    width: 25%; }
+
+  .every-project {
+    width: 25%; }
+
+  .project {
+    height: 600px;
+    margin: 20px 0 0 20px; }
+
+  .contain-right {
+    height: 900px; }
+
+  .project-img {
+    margin: 10px 40%; } }
+.every-wrapper {
+  width: 94%;
+  background-color: white;
+  float: left;
+  padding: 10px 0 0 0;
+  margin: 20px 3%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.every-wrapper .hj-ul {
+  list-style: none; }
+
+.every-wrapper .hj-ul li {
+  color: #00adb5;
+  font-size: 20px;
+  padding: 10px; }
+
+.content-count {
+  margin-left: 10px; }
+
+.input-find span {
+  margin-left: 2%; }
+
+.input-find input {
+  height: 20px; }
+
+.input-find .hj-button {
+  font-size: 14px;
+  color: white;
+  background-color: #00adb5;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer; }
+
+.every-input {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3%;
+  width: 100px; }
+
+.title-left {
+  cursor: pointer; }
+
+.title-right {
+  cursor: pointer; }
+
+.contain-left {
+  float: left; }
+
+.contain-right {
+  width: 70%;
+  float: right;
+  overflow-y: scroll; }
+
+.project {
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.contain-left h3 {
+  color: #00adb5;
+  width: 50%;
+  margin: 20px 30%; }
+
+.project-img {
+  width: 120px;
+  height: 120px;
+  background-color: #B1BCBD;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.every-project {
+  height: 150px;
+  background-color: #B1BCBD;
+  display: inline-block;
+  margin: 20px 2%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.titleDetail {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid white; }
+
+.title-name {
+  float: left;
+  color: #00adb5;
+  margin: 5px 0 0 5px; }
+
+.title-detail {
+  float: right;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+  cursor: pointer; }
+
+.project-icon {
+  width: 38%;
+  height: 60%;
+  background-color: #3CA5EB;
+  margin: 4% 3%;
+  float: left;
+  cursor: pointer; }
+
+.project-text {
+  float: right;
+  width: 50%;
+  height: 80%;
+  margin: 10px auto;
+  cursor: pointer; }
+
+.project-text h3 {
+  font-size: 18px;
+  margin: 0 0  0 -20px;
+  text-align: center; }
+
+.project-count ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0; }
+
+.project-count ul li {
+  padding: 5px; }
+
+.fix {
+  position: fixed; }
+
+/*# sourceMappingURL=lookaway-project.css.map */

@@ -1,0 +1,205 @@
+
+@mixin position($topV:0px,$leftV:0px,$rightV:0px,$bottomV:0px){
+  position: relative;
+  top: $topV;
+  left: $leftV;
+  right: $rightV;
+  bottom: $bottomV;
+}
+
+/* 宽高 */
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+}
+/* background */
+@mixin bg($url, $size) {
+  background: $url center no-repeat;
+  background-size: $size;
+}
+
+/* 相对居中和绝对居中 */
+@mixin r_center {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin a_center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* 阴影 */
+@mixin shadows($h, $v, $spread, $rgba) {
+  -webkit-box-shadow: $h $v $spread $rgba;
+  -moz-box-shadow: $h $v $spread $rgba;
+  box-shadow: $h $v $spread $rgba;
+}
+/* 过渡 */
+@mixin trans($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+/* 清除浮动 */
+.clear_float:before,
+.clear_float:after {
+  clear: both;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  height: 0;
+}
+
+
+/*************************************************************************************/
+body{
+  margin: 0;
+}
+.head{
+  background-color: red;
+  @include wh(100%,55px);
+  box-shadow: 0px 1px 2px #888888;
+}
+.head-left-log{
+  background: url("../images/jidian-logo2.png") center no-repeat #3CA5EB;
+  background-size: 70%;
+  @include wh(200px,55px);
+  float: left;
+}
+.head-right{
+  background-color: white;
+  @include wh(calc(100% - 200px),55px);
+  float: right;
+}
+.head-right-lt-img{
+  @include wh(30px,30px);
+  background:url("../images/icon-menu.png") no-repeat;
+  float: left;
+  @include position(15px,25px,0px,0px);
+}
+.img-mark{
+  @include wh(30px,30px);
+  background:url("../images/icon-hide.png") no-repeat;
+  @include position(5px,-10px,0px,0px);
+}
+.head-right-rt-img{
+  @include wh(19px,18px);
+  background:url("../images/icon-logout.png") no-repeat;
+  @include position(20px,-20px,0px,0px);
+  float: right;
+}
+.menu{
+  width: 200px;
+  background-color: rgb(58, 71, 80);
+  float: left;
+  min-height: 700px;
+}
+.admin{
+  @include wh(80%,70px);
+  @include position(20px,10%,10%,0px);
+}
+.admin .menu-icon{
+  @include wh(40px,40px);
+  @include bg(url("../images/icon-logo.png"),contain);
+  float: left;
+}
+.admin .menu-text{
+  float: right;
+  @include position(15px,-40px,0px,0px);
+  color: white;
+}
+.menu-same-icon{
+  @include wh(30px,30px);
+  float: left;
+  @include position(10px,30px,0px,0px);
+}
+.menu-same-text{
+  float: right;
+  @include position(18px,-60px,0px,0px);
+  color: white;
+  @include wh(60px,20px);
+  font-size: 15px;
+}
+.menu-same-style{
+  @include wh(100%,50px);
+  display: block;
+}
+.menu-same-style:hover{
+  background-color: #00adb5;
+  cursor: pointer;
+}
+.ad-co-icon{
+  @include bg(url("../images/icon-user.png"),contain);
+}
+.pr-co-icon{
+  @include bg(url("../images/icon-project.png"),contain);
+}
+.date-icon{
+  @include bg(url("../images/icon-chart.png"),contain);
+}
+.active-icon{
+  @include bg(url("../images/icon-msg.png"),contain);
+}
+.menu ul{
+  margin:0;
+  position: relative;
+  left: 50px;
+}
+.menu a{
+  text-decoration: none;
+  color: #B1BCBD;
+}
+.menu li{
+  list-style: none;
+  color: #B1BCBD;
+  font-size: 15px;
+  padding: 7px;
+  /*cursor: auto;*/
+}
+.menu li:hover{
+  text-decoration: underline;
+}
+.contain{
+  min-width: 1280px;
+}
+//主体内容
+.hj-container{
+  float: right;
+  width: calc(100% - 200px);
+  background-color: #eeeeee;
+  min-height: 700px;
+}
+//平台数据/模板数据/总概况
+.title h3{
+  color: #00adb5;
+  display: inline-block;
+  vertical-align: middle;
+  //cursor: pointer;
+}
+.title i{
+  display: inline-block;
+  vertical-align: middle;
+  background: #00adb5;
+  width: 1px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.title-left{
+  margin-left: 3%;
+}
+.title-right{
+
+}
+.title-last{
+}
+//小标题 字体变大
+.size-big {
+  font-size: 24px;
+}

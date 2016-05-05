@@ -1,0 +1,83 @@
+//屏幕-折线图-适配
+@media screen and (max-width: 1367px) {
+  .every-date{
+    height: 700px;
+  }
+
+  .project{
+    height: 550px;
+  }
+  .contain-left{
+    height: 550px;
+    width: 55%;
+  }
+
+}
+@media screen and (min-width: 1368px) {
+
+  .project{
+    height: 650px;
+    width: 22%;
+  }
+  .contain-right{
+    height: 700px;
+    width: 55%;
+  }
+}
+
+//******************更换内容css*************************
+//用户列表
+.project{
+  background-color: white;
+  padding: 10px 0 0 0;
+  margin: 20px 5%;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.16);
+  float: left;
+}
+.contain-right{
+  float: right;
+  margin: 20px 5%;
+  width: 45%;
+  //height: 600px;
+  background-color: white;
+}
+.project-same{
+ margin-left: 20px;
+  font-size: 20px;
+}
+.input-style {
+  width: 30%;
+  height: 20px;
+}
+.hj-ul{
+  list-style: none;
+  padding: 0;
+}
+.hj-ul li{
+  padding: 5px;
+  color: #00adb5;
+  padding: 10px;
+}
+.project-text{
+
+}
+.unfinish{
+
+}
+.finished{
+
+}
+.project-text-same h3{
+ margin-left: 3%;
+}
+.hot-button{
+  //cursor: pointer;
+  //color: #00adb5;
+}
+textarea{
+  resize: none;
+  margin: 0 3%;
+  width: 80%;
+  height: 80px;
+  font-size: 16px;
+}

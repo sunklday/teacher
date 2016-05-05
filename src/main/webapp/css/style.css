@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* 宽高 */
+/* background */
+/* 相对居中和绝对居中 */
+/* 阴影 */
+/* 过渡 */
+/* 清除浮动 */
+.clear_float:before,
+.clear_float:after {
+  clear: both;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  height: 0; }
+
+/*************************************************************************************/
+body {
+  margin: 0; }
+
+.head {
+  background-color: red;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0px 1px 2px #888888; }
+
+.head-left-log {
+  background: url("../images/jidian-logo2.png") center no-repeat #3CA5EB;
+  background-size: 70%;
+  width: 200px;
+  height: 55px;
+  float: left; }
+
+.head-right {
+  background-color: white;
+  width: calc(100% - 200px);
+  height: 55px;
+  float: right; }
+
+.head-right-lt-img {
+  width: 30px;
+  height: 30px;
+  background: url("../images/icon-menu.png") no-repeat;
+  float: left;
+  position: relative;
+  top: 15px;
+  left: 25px;
+  right: 0px;
+  bottom: 0px; }
+
+.img-mark {
+  width: 30px;
+  height: 30px;
+  background: url("../images/icon-hide.png") no-repeat;
+  position: relative;
+  top: 5px;
+  left: -10px;
+  right: 0px;
+  bottom: 0px; }
+
+.head-right-rt-img {
+  width: 19px;
+  height: 18px;
+  background: url("../images/icon-logout.png") no-repeat;
+  position: relative;
+  top: 20px;
+  left: -20px;
+  right: 0px;
+  bottom: 0px;
+  float: right; }
+
+.menu {
+  width: 200px;
+  background-color: #3a4750;
+  float: left;
+  min-height: 700px; }
+
+.admin {
+  width: 80%;
+  height: 70px;
+  position: relative;
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  bottom: 0px; }
+
+.admin .menu-icon {
+  width: 40px;
+  height: 40px;
+  background: url("../images/icon-logo.png") center no-repeat;
+  background-size: contain;
+  float: left; }
+
+.admin .menu-text {
+  float: right;
+  position: relative;
+  top: 15px;
+  left: -40px;
+  right: 0px;
+  bottom: 0px;
+  color: white; }
+
+.menu-same-icon {
+  width: 30px;
+  height: 30px;
+  float: left;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  right: 0px;
+  bottom: 0px; }
+
+.menu-same-text {
+  float: right;
+  position: relative;
+  top: 18px;
+  left: -60px;
+  right: 0px;
+  bottom: 0px;
+  color: white;
+  width: 60px;
+  height: 20px;
+  font-size: 15px; }
+
+.menu-same-style {
+  width: 100%;
+  height: 50px;
+  display: block; }
+
+.menu-same-style:hover {
+  background-color: #00adb5;
+  cursor: pointer; }
+
+.ad-co-icon {
+  background: url("../images/icon-user.png") center no-repeat;
+  background-size: contain; }
+
+.pr-co-icon {
+  background: url("../images/icon-project.png") center no-repeat;
+  background-size: contain; }
+
+.date-icon {
+  background: url("../images/icon-chart.png") center no-repeat;
+  background-size: contain; }
+
+.active-icon {
+  background: url("../images/icon-msg.png") center no-repeat;
+  background-size: contain; }
+
+.menu ul {
+  margin: 0;
+  position: relative;
+  left: 50px; }
+
+.menu a {
+  text-decoration: none;
+  color: #B1BCBD; }
+
+.menu li {
+  list-style: none;
+  color: #B1BCBD;
+  font-size: 15px;
+  padding: 7px;
+  /*cursor: auto;*/ }
+
+.menu li:hover {
+  text-decoration: underline; }
+
+.contain {
+  min-width: 1280px; }
+
+.hj-container {
+  float: right;
+  width: calc(100% - 200px);
+  background-color: #eeeeee;
+  min-height: 700px; }
+
+.title h3 {
+  color: #00adb5;
+  display: inline-block;
+  vertical-align: middle; }
+
+.title i {
+  display: inline-block;
+  vertical-align: middle;
+  background: #00adb5;
+  width: 1px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.title-left {
+  margin-left: 3%; }
+
+.size-big {
+  font-size: 24px; }
+
+/*# sourceMappingURL=style.css.map */

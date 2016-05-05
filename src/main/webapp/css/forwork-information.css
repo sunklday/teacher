@@ -1,0 +1,118 @@
+@media screen and (max-width: 1367px) {
+
+    .contain-left {
+        height: 550px;
+        width: 30%;
+    }
+
+    .contain-right {
+        height: 770px;
+        width: 45%;
+    }
+    .hj-ul li {
+        padding: 5px;
+
+    }
+    .project-same {
+        font-size: 16px;
+    }
+    .project-text textarea {
+        font-size: 13px;
+    }
+    .project-text-same h3 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1368px) {
+    .contain-left {
+        height: 600px;
+        width: 22%;
+    }
+
+    .contain-right {
+        height: 830px;
+        width: 45%;
+    }
+    .hj-ul li {
+        padding: 10px;
+
+    }
+    .project-same {
+        font-size: 20px;
+    }
+    .project-text textarea {
+        font-size: 16px;
+    }
+}
+
+.contain-left {
+    background-color: white;
+    padding: 10px 0 0 0;
+    margin: 20px 5%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+    float: left;
+}
+
+.contain-right {
+    float: right;
+    margin: 20px 5%;
+    /*width: 45%;*/
+    background-color: white;
+}
+
+.project-same {
+    margin-left: 20px;
+    /*font-size: 20px;*/
+}
+
+.input-style {
+    width: 30%;
+    height: 20px;
+    border:1px solid #00adb5;
+}
+.input-box{
+    width: 20px;
+    margin-left: 7%;
+}
+.hj-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hj-ul li {
+    color: #00adb5;
+}
+
+.project-text-same h3 {
+    color: #00adb5;
+    margin: 20px 0 10px 4%;
+}
+.descrip-te{
+    width: 96%;
+    height: 80px;
+    resize: none;
+    margin-top: 10px;
+    border-color: #00adb5;
+}
+.project-text textarea {
+    resize: none;
+    margin: 0 4%;
+    width: 92%;
+    height: 80px;
+    /*font-size: 16px;*/
+    border-color: #00adb5;
+}
+.save-button{
+    background-color: #00adb5;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 9px ;
+    margin: 20px 0 0 40%;
+    color: white;
+    /*display: inline-block;*/
+    line-height: 30px;
+    text-align: center;
+}
+

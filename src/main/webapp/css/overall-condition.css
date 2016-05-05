@@ -1,0 +1,55 @@
+@media screen and (max-width: 1367px) {
+  .every-wrapper {
+    height: 300px; } }
+@media screen and (min-width: 1368px) {
+  .every-wrapper {
+    height: 460px; } }
+.hj-cursor h3 {
+  cursor: pointer; }
+
+.every-wrapper {
+  width: 44%;
+  background-color: white;
+  float: left;
+  padding: 10px 0 0 0;
+  margin: 20px 3%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.every-wrapper-time {
+  width: 100%;
+  height: 40px; }
+
+.ev-wr-ti-PV {
+  width: auto;
+  height: 40px;
+  text-align: center;
+  margin-left: 20px;
+  float: left;
+  font-size: 18px;
+  color: #00adb5;
+  line-height: 40px; }
+
+.ev-wr-ti-same {
+  float: right;
+  font-size: 16px;
+  color: #b7b7b7;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px; }
+
+.date-same {
+  background-color: #888888;
+  width: 100%;
+  height: calc(100% - 40px); }
+
+.overall-date .hj-ul {
+  list-style: none; }
+
+.overall-date .hj-ul li {
+  color: #00adb5;
+  font-size: 20px;
+  padding: 10px; }
+
+/*# sourceMappingURL=overall-condition.css.map */

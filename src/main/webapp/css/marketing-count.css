@@ -1,0 +1,51 @@
+@media screen and (max-width: 1367px) {
+  .every-wrapper {
+    height: 300px; } }
+@media screen and (min-width: 1368px) {
+  .every-wrapper {
+    height: 460px; } }
+.every-table {
+  width: 96%;
+  background-color: white;
+  padding: 10px 0 10px 0;
+  margin: 20px 3%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+
+.every-wrapper-title {
+  width: 100%;
+  height: 40px; }
+
+.hj-title {
+  width: auto;
+  height: 40px;
+  text-align: center;
+  margin-left: 20px;
+  float: left;
+  font-size: 18px;
+  color: #00adb5;
+  line-height: 40px; }
+
+.date-same {
+  width: 96%;
+  margin: 10px 2%; }
+
+table {
+  width: 100%; }
+
+thead {
+  color: #00adb5; }
+
+tr {
+  height: 30px; }
+
+th {
+  border-bottom: 3px solid #dddddd;
+  width: 25%;
+  font-size: 18px; }
+
+td {
+  background-color: white;
+  text-align: center;
+  border-bottom: 1px solid #dddddd; }
+
+/*# sourceMappingURL=marketing-count.css.map */

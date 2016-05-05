@@ -1,0 +1,28 @@
+@media screen and (max-width: 1367px) {
+    .every-wrapper {
+        min-height: 500px;
+    }
+}
+
+@media screen and (min-width: 1368px) {
+    .every-wrapper {
+        min-height: 800px;
+    }
+}
+
+.hj-cursor h3 {
+    cursor: pointer;
+}
+
+.laoca-right{
+    float: right;
+    color: #00adb5;
+    font-size: 20px;
+    margin: 20px 40px 0 0;
+    cursor: pointer;
+}
+.every-wrapper{
+    background-color: white;
+    margin: 20px 3%;
+    padding: 20px 2%;
+}

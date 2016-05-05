@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springapp.mvc.persistence.WordsFileMapper">
+<!--    <update id="findAllWords"  resultType="Teacher">
+        UPDATE TEACHER
+        SET
+        AGE = #{age},
+        SCHOOL = #{school}
+        WHERE TEACHER.NAME = #{name}
+    </update>-->
+
+    <select id="findAllWords" resultType="WordsFile">
+        SELECT * FROM test.words_file
+        limit #{currentNum},#{rows}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer" >
+        select count(1) from test.words_file
+    </select>
+
+    <insert id="addWordsFile" parameterType="WordsFile">
+        INSERT INTO test.words_file
+        (words_file_name,file_path,introduce)
+        VALUE
+        (#{wordsFileName},#{filePath},#{introduce})
+    </insert>
+</mapper>
