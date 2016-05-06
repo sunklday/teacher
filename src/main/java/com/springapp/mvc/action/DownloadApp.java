@@ -2,6 +2,7 @@ package com.springapp.mvc.action;
 
 import com.alibaba.fastjson.JSONObject;
 import com.springapp.base.Page;
+import com.springapp.mvc.biz.AdminBiz;
 import com.springapp.mvc.biz.WordFileBiz;
 import com.springapp.mvc.domain.WordsFile;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,8 @@ public class DownloadApp  {
     @Autowired
     public WordFileBiz wordFileBiz;
 
-
+    @Autowired
+    public AdminBiz adminBiz;
 
     @RequestMapping(value = "read/{wordsSelect}")
     @ResponseBody
@@ -45,13 +47,29 @@ public class DownloadApp  {
         return null;
     }
 
-    @RequestMapping(value = "/add/{edit}",method = RequestMethod.POST)
+
+    @RequestMapping(value = "/admin/{wordsSelect}")
     @ResponseBody
-    public String insertCase(@PathVariable("edit")String edit ,WordsFile wordsFile){
+    public Page allAdmin(HttpServletRequest request,@RequestParam("page") Integer page,@RequestParam("rows") Integer rows,
+                        @PathVariable("wordsSelect")String wordsSelect){
+        page = page-1;
+        String sortElement = request.getParameter("sidx");
+        Integer sortMode = request.getParameter("sord").equals("asc")?1:0;
+        if ("allcase".equals(wordsSelect)){
+
+            return adminBiz.findAllAdmin(page, rows);
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/update/{edit}",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateWordFileAction(@PathVariable("edit")String edit,WordsFile wordsFile){
 
        if("add".equals(edit)){
-
-            wordFileBiz.addWordsFile(wordsFile);
+           wordFileBiz.addWordsFile(wordsFile);
+        }else if("dec".equals(edit)){
+            wordFileBiz.delectWordsFile(wordsFile.getId());
         }
         return "success";
     }

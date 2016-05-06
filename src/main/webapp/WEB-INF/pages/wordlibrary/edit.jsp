@@ -26,6 +26,14 @@
 
 </head>
 <body>
+<script><%
+  if(session.getAttribute("admin")==null){
+%>
+window.parent.location='/';
+  <%
+    }
+  %></script>
+
 <div class="topbar-wrap white">
   <div class="topbar-inner clearfix">
   </div>
@@ -40,18 +48,18 @@
         <li>
           <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
           <ul class="sub-menu">
-            <li><a href="administer-分类管理（标签）.html"><i class="icon-font">&#xe008;</i>分类管理</a></li>
-            <li><a href="/edit"><i class="icon-font">&#xe005;</i>公告发布</a></li>
-            <li><a href="administer-订单查询.html"><i class="icon-font">&#xe006;</i>订单查询</a></li>
+            <li><a href="/jqgrid"><i class="icon-font">&#xe008;</i>主页</a></li>
+            <li><a href="/edit"><i class="icon-font">&#xe005;</i>添加词库</a></li>
+            <li><a href="/admin"><i class="icon-font">&#xe006;</i>管理员管理</a></li>
           </ul>
         </li>
         <li>
-          <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
+          <a href="#"><i class="icon-font">&#xe018;</i>---</a>
           <ul class="sub-menu">
-            <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
+            <li><a href=""><i class="icon-font">&#xe017;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe037;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe046;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe045;</i>---</a></li>
           </ul>
         </li>
       </ul>
@@ -61,7 +69,7 @@
   <div class="main-wrap">
 
     <div class="crumb-wrap">
-      <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">公告发布</a><span class="crumb-step">&gt;</span><span>新增公告</span></div>
+      <div class="crumb-list"><i class="icon-font"></i><a href="/jqgrid">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="">词库修改</a><span class="crumb-step">&gt;</span><span></span></div>
     </div>
     <div class="result-wrap">
       <div class="result-content">
@@ -70,26 +78,28 @@
             <tbody>
               <th><i class="require-red">*</i>词库名称：</th>
               <td>
-                <input class="common-text required" id="wordsFileName" name="wordsFileName" size="50" value="" type="text">
+                <input class="common-text required" id="wordsFileName" name="wordsFileName" size="50" value="${WordsFile.wordsFileName}" type="text">
               </td>
             </tr>
 
             <tr>
               <th><i class="require-red">*</i>文件：</th>
 
-              <td><input id="filePath" name="wordsFileName" type="file"><input id="uploadFile" type="submit" value="upload"/></td>
+              <td><input id="filePath" name="wordsFileName" type="file" value="${WordsFile.filePath}"><input id="uploadFile" type="submit" value="upload"/></td>
 
             </tr>
               <input type="hidden" id="icoHid" >
+              <input type="hidden" id="wordsFileId" value="${WordsFile.id}">
             <tr>
               <th>介绍：</th>
-              <td><textarea name="introduce" class="common-textarea" id="introduce" cols="30" style="width: 98%;" rows="10"></textarea></td>
+              <td><textarea name="introduce" class="common-textarea" id="introduce" cols="30"  style="width: 98%;" rows="10">${WordsFile.introduce}</textarea></td>
             </tr>
             <tr>
               <th></th>
               <td>
                 <div class="btn btn-primary btn6 mr10" id="save-button" >提交</div>
                 <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                <div class="btn btn6" id="delect-button" >删除<div>
               </td>
             </tr>
             </tbody></table>
@@ -105,11 +115,24 @@
   $('#save-button').on('click', function () {
     var wordsFileName = $("#wordsFileName").val(),
             filePath = $("#icoHid").val(),
+            id=$("#wordsFileId").val(),
             introduce = $("#introduce").val();
+    if(wordsFileName==""){
+      alert('请输入词库名称！');
+      return false;
+    }
+    if(filePath==""){
+      alert('请上传文件！');
+      return false;
+    }
+    if(id==""){
+      id="0";
+    }
     $(this).ajaxSubmit({
       type: 'post', // 提交方式 get/post
-      url: '/words/add/add', // 需要提交的 url
+      url: '/words/update/add', // 需要提交的 url
       data: {
+        'id':id,
         'wordsFileName': wordsFileName,
         'filePath': filePath,
         'introduce': introduce
@@ -137,7 +160,7 @@
 
       success: function (data, status) {
 
-          alert('操作ok');
+          alert('上传成功');
         //$("#loading").hide();
       },
       error: function (data, status, e) {
@@ -146,6 +169,34 @@
       }
     });
   }
+
+  $('#delect-button').on('click', function () {
+    var r=confirm("确定删除");
+    var id=$("#wordsFileId").val();
+    if(id==""){
+      return false;
+    }
+    if (r==true)
+    {
+      $(this).ajaxSubmit({
+        type: 'post', // 提交方式 get/post
+        url: '/words/update/dec', // 需要提交的 url
+        data: {
+          id:id
+        },
+        success: function (data) { // data 保存提交后返回的数据，一般为 json 数据
+          // 此处可对 data 作相关处理
+          alert('删除成功！');
+          window.location.href='/jqgrid';
+        }
+      });
+    }
+    else
+    {
+      alert("取消删除");
+    }
+
+  });
 </script>
 </body>
 </html>

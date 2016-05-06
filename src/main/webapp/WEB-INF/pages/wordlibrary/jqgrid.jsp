@@ -25,6 +25,13 @@
   <script src="js/laoca/laoca-controller.js"      type="text/javascript"></script>
 </head>
 <body>
+<script><%
+  if(session.getAttribute("admin")==null){
+%>
+window.parent.location='/';
+  <%
+    }
+  %></script>
 <div class="topbar-wrap white">
   <div class="topbar-inner clearfix">
   </div>
@@ -39,18 +46,18 @@
         <li>
           <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
           <ul class="sub-menu">
-            <li><a href="administer-分类管理（标签）.html"><i class="icon-font">&#xe008;</i>分类管理</a></li>
-            <li><a href="/edit"><i class="icon-font">&#xe005;</i>公告发布</a></li>
-            <li><a href="administer-订单查询.html"><i class="icon-font">&#xe006;</i>订单查询</a></li>
+            <li><a href="/jqgrid"><i class="icon-font">&#xe008;</i>主页</a></li>
+            <li><a href="/edit"><i class="icon-font">&#xe005;</i>添加词库</a></li>
+            <li><a href="/admin"><i class="icon-font">&#xe006;</i>管理员管理</a></li>
           </ul>
         </li>
         <li>
-          <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
+          <a href="#"><i class="icon-font">&#xe018;</i>---</a>
           <ul class="sub-menu">
-            <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-            <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
+            <li><a href=""><i class="icon-font">&#xe017;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe037;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe046;</i>---</a></li>
+            <li><a href=""><i class="icon-font">&#xe045;</i>---</a></li>
           </ul>
         </li>
       </ul>
@@ -60,7 +67,7 @@
   <div class="main-wrap">
 
     <div class="crumb-wrap">
-      <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">公告发布</a><span class="crumb-step">&gt;</span><span>新增公告</span></div>
+      <div class="crumb-list"><i class="icon-font"></i><a href="/jqgrid">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/"></a><span class="crumb-step">&gt;</span><span></span></div>
     </div>
     <table id="list4"></table>
     <div id="gridpager"></div>

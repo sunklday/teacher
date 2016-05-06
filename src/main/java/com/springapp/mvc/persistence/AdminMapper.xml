@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springapp.mvc.persistence.AdminMapper">
+    <!--    <update id="findAllWords"  resultType="Teacher">
+            UPDATE TEACHER
+            SET
+            AGE = #{age},
+            SCHOOL = #{school}
+            WHERE TEACHER.NAME = #{name}
+        </update>-->
+
+    <select id="findAdminByAdminAndPassWord" resultType="Admin">
+        SELECT * FROM test.admin
+        WHERE admin_name = #{adminName} and pass_word = #{passWord}
+    </select>
+
+    <select id="findAllAdmin" resultType="Admin">
+        SELECT * FROM test.admin
+        limit #{currentNum},#{rows}
+    </select>
+
+
+    <select id="findCount" resultType="java.lang.Integer" >
+        select count(1) from test.admin
+    </select>
+
+    <select id="findAllAdminByAdminName" resultType="Admin" >
+        select * from test.admin
+        WHERE admin_name = #{adminName}
+    </select>
+
+    <insert id="addAdmin" parameterType="Admin">
+        INSERT INTO test.admin
+        (admin_name,pass_word,introduce)
+        VALUE
+        (#{adminName},#{passWord},#{introduce})
+    </insert>
+
+    <update id="updateAdmin" parameterType="Admin">
+        UPDATE test.admin
+        SET
+        admin_name = #{adminName},
+        pass_word =#{passWord},
+        introduce = #{introduce}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

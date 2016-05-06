@@ -49,6 +49,20 @@ public class WordFileBiz {
 
 
    public void  addWordsFile(WordsFile wordsFile){
-        wordsFileMapper.addWordsFile(wordsFile);
+       if(wordsFile.getId()==0) {
+           wordsFileMapper.addWordsFile(wordsFile);
+       }
+       else {
+           wordsFileMapper.updateWordsFile(wordsFile);
+       }
+
    }
+
+    public WordsFile findWordsFileByFileName(String WordsFileName){
+        return wordsFileMapper.findWordsFileByFileName(WordsFileName);
+    }
+
+    public void delectWordsFile(Integer id){
+        wordsFileMapper.delectWordsFile(id);
+    }
 }

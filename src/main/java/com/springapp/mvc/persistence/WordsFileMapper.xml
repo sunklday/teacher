@@ -26,4 +26,23 @@
         VALUE
         (#{wordsFileName},#{filePath},#{introduce})
     </insert>
+
+    <select id="findWordsFileByFileName" resultType="WordsFile" >
+        select * from test.words_file
+        WHERE words_file_name = #{wordsFileName}
+    </select>
+
+    <update id="updateWordsFile" parameterType="WordsFile">
+        UPDATE test.words_file
+        SET
+        words_file_name = #{wordsFileName},
+        file_path =#{filePath},
+        introduce = #{introduce}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delectWordsFile" >
+        DELETE FROM test.words_file
+        WHERE id =#{id}
+    </delete>
 </mapper>
